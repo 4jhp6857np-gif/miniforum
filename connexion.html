@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniForum - Connexion</title>
+</head>
+<body>
+    <header>
+        <h1>MiniForum</h1>
+        <img src="images/logo.png" alt="Logo du MiniForum" style="width: 210px; height: 140px">
+    </header>
+    <nav>
+        <ul>
+            <li><p><a href="inscription.html">Inscription</a></p></li>
+            <li><p><a href="connexion.html">Connexion</a></p></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="/connexion" method="post">
+            <h2>Connexion</h2>
+            <fieldset>
+                <legend>Vos identifiants</legend>
+                <p>
+                    <strong><label for="identifiant">Pseudo ou adresse e-mail</label></strong><br>
+                    <input type="text" id="identifiant" name="identifiant" required>
+                </p>
+                <p>
+                    <strong><label for="motdepasse">Mot de passe</label></strong><br>
+                    <input type="password" id="motdepasse" name="motdepasse" required>
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Se connecter</button>
+                <a href="inscription.html">Pas encore de compte ? S'inscrire</a>
+            </p>
+            
+        </form>
+    <!-- Liste des sujets-->
+    </main>
+
+    <footer>
+    <!-- Pied de page-->
+    </footer>
+</body>
+</html>

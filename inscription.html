@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniForum- Accueil</title>
+    <title>MiniForum - Inscription</title>
 </head>
 <body>
     <header>
-        <!-- Titre du site + navigation-->
+        <h1>MiniForum</h1>
+        <img src="images/logo.png" alt="Logo du MiniForum" style="width: 210px; height: 140px">
     </header>
-
+    <nav>
+        <ul>
+            <li><p><a href="inscription.html">Inscription</a></p></li>
+            <li><p><a href="connexion.html">Connexion</a></p></li>
+        </ul>
+    </nav>
     <main>
         <h2>Crée un compte</h2>
         <form action="/inscription" method="post">
@@ -47,10 +53,9 @@
                 </p>
             </fieldset>
             <button type="submit">Créer mon compte</button>
+            <a href="/connexion.html">Déjà inscrit ? Se connecter</a>
         </form>
-
     </main>
-
     <footer>
     <!-- Pied de page-->
     </footer>
