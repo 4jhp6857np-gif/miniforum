@@ -15,37 +15,96 @@
                 <li><a href="#sujets">Sujets</a></li>
             </ul>
         </nav>
-    <!-- Titre du site + navigation-->
+
     </header>
     <main>
+        <section id="formulaire">
+            <h2>Nouveau sujet</h2>
+            <form action="/topics" method= "post">
+                <fieldset>
+                    <legend>Votre message</legend>
+                    <p>
+                        <strong><label for="pseudo">Pseudo</label></strong><br>
+                        <input type="text" id="pseudo" name="pseudo" placeholder="ex : Danny" required>
+                    </p>
+                    <p>
+                        <strong><label for="titre">Titre du sujet</label></strong><br>
+                        <input type="text" id="titre" name="titre" required>
+                    </p>
+                    <p>
+                        <strong><label for="message">Message</label></strong><br>
+                        <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
+                    </p>
+                    
+                </fieldset>
+                <fieldset>
+                    <legend>Options de publication</legend>
+                    <p>
+                        <strong><label for="categorie">Catégorie</label></strong><br>
+                        <select id="categorie" name="categorie">
+                            <option value="general">Général</option>
+                            <option value="aide">Aide</option>
+                            <option value="projets">Projets</option>
+                        </select>
+                    </p>
+                    <p>
+                        <strong><label for="visibilite">Visibilité</label></strong>
+                        <input type="radio" id="public" name="visibilite" value="public" checked>
+                        <label for="public">Public</label>
+                        <input type="radio" id="prive" name="visibilite" value="prive">
+                        <label for="prive">Réservé aux membres</label>
+                    </p>
+                </fieldset>
+                <br>
+                <button type="submit">Publier le sujet</button>
+            </form>
+        </section>
         <section id="sujets">
             <h2>Sujets récents</h2>
             <article>
                 <h3><a href="./sujet.html">Sujet 1</a></h3>
-                <div><strong>Auteur : </strong></div>
-                <div>Catégorie : </div>
+                <strong>Auteur : Daniel </strong><br>
+                Catégorie : 
                 <p>
                     Ceci est un paragraphe très important
                 </p>
             </article>
             <article>
                 <h3><a href="./sujet.html">Sujet 2</a></h3>
-                <div><strong>Auteur : </strong></div>
-                <div>Catégorie : </div>
+                <strong>Auteur : Julien </strong><br>
+                Catégorie : 
                 <p>
                     Ceci est un paragraphe très important
                 </p>
             </article>
             <article>
                 <h3><a href="./sujet.html">Sujet 3</a></h3>
-                <div><strong>Auteur : </strong></div>
-                <div>Catégorie : </div>
+                <strong>Auteur : Robert </strong><br>
+                Catégorie : 
                 <p>
                     Ceci est un paragraphe très important
                 </p>
             </article>
         </section>
-    <!-- Liste des sujets-->
+        <table>
+            <caption> MiniForum </caption>
+            <thead >
+                <tr>
+                    <th> </th>
+                    <th > Daniel </th>
+                    <th > Julien </th>
+                    <th > Robert </th>
+                </tr>
+            </thead >
+            <tbody >
+                <tr >
+                    <td > Nombre de réponses </td >
+                    <td > 1 </td >
+                    <td > 2 </td >
+                    <td > 4 </td >
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer>
     </footer>
