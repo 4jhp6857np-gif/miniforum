@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniForum- Accueil</title>
+</head>
+<body>
+    <header>
+        <!-- Titre du site + navigation-->
+    </header>
+
+    <main>
+        <h2>Crée un compte</h2>
+        <form action="/inscription" method="post">
+            <fieldset>
+                <legend>Identifiants</legend>
+                <p>
+                    <strong><label for="pseudo">Pseudo</label></strong><br>
+                    <input type="text" id="pseudo" 
+                    name="pseudo" pattern="[A-Za-z0-9]{3,15}"
+                    title="3 à 15 caractères : 
+                    lettres et chiffres uniquement" required>
+                </p>
+                <p>
+                    <strong><label for="email">Adresse e-mail</label></strong><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <strong><label for="motdepasse">Mot de passe</label></strong><br>
+                    <input type="password" id="motdepasse" name="motdepasse" required minlength="8">
+                </p>
+                <p>
+                    <strong><label for="naissance">Date de naissance</label></strong>
+                    <input type="date" id="naissance" name="naissance">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Préférences</legend>
+                <p>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Recevoir la lettre d'information</label><br>
+                </p>
+                <p>
+                    <input type="checkbox" id="news" name="news" required>
+                    <label for="news">J'accepte les conditions d'utilisations</label>
+                </p>
+            </fieldset>
+            <button type="submit">Créer mon compte</button>
+        </form>
+
+    </main>
+
+    <footer>
+    <!-- Pied de page-->
+    </footer>
+</body>
+</html>

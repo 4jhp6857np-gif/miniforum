@@ -20,7 +20,7 @@
     <main>
         <section id="formulaire">
             <h2>Nouveau sujet</h2>
-            <form action="/topics" method= "post">
+            <form action="/topics" method="post">
                 <fieldset>
                     <legend>Votre message</legend>
                     <p>
@@ -29,7 +29,7 @@
                     </p>
                     <p>
                         <strong><label for="titre">Titre du sujet</label></strong><br>
-                        <input type="text" id="titre" name="titre" required>
+                        <input type="text" id="titre" name="titre" maxlength="80" required>
                     </p>
                     <p>
                         <strong><label for="message">Message</label></strong><br>

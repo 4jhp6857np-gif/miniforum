@@ -7,22 +7,20 @@
 </head>
 <body>
     <header>
+        <h1>MiniForum</h1>
         <img src="images/logo.png" alt="Logo du MiniForum" style="width: 210px; height: 140px">
     </header>
 
     <main>
         <a href="./index.html">Revenir à la première page</a>
         <h2>MiniForum</h2>
-        <p>
-            Auteur<br>
-            Date<br>
-            Catégorie
-        </p>
+        <p>Auteur<br>Date<br>Catégorie</p>
         <section>
             <h3>Réponses</h3>
             <article>
+                <h4>Article1</h4>
                 <p>
-                    <strong>Auteur : </strong><br>
+                    <strong>Auteur : Emmanuel </strong><br>
                     Date : <time datetime="2026-10-01">1 octobre 2026</time><br>
                 </p>
                 <p>
@@ -30,8 +28,9 @@
                 </p>
             </article>
             <article>
+                <h4>Article2</h4>
                 <p>
-                    <strong>Auteur : </strong><br>
+                    <strong>Auteur : Maxime </strong><br>
                     Date : <time datetime="2026-10-01">1 octobre 2026</time><br>
                 </p>
                 <p>
@@ -39,8 +38,9 @@
                 </p>
             </article>
             <article>
+                <h4>Article3</h4>
                 <p>
-                    <strong>Auteur : </strong><br>
+                    <strong>Auteur : Kevin</strong><br>
                     Date : <time datetime="2026-10-01">1 octobre 2026</time><br>
                 </p>
                 <p>
@@ -48,6 +48,26 @@
                 </p>
             </article>
         </section>
+        <form action="/topics" method="post">
+            <h3>Répondre à ce sujet</h3>
+            <fieldset>
+                <legend>Votre réponse</legend>
+                <p>
+                    <strong><label for="pseudo">Pseudo</label></strong><br>
+                    <input type="text" id="pseudo" name="pseudo" placeholder="ex : Danny" required>
+                </p>
+                <p>
+                    <strong><label for="message">Message</label></strong><br>
+                    <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
+                </p>
+                <button type="submit">Publier le sujet</button>
+            </fieldset>
+        </form>
+        <h3>Sujets similaires</h3>
+        <aside>
+            <a href="https://www.apple.com/chfr/ipad-air/">Lien 1</a><br>
+            <a href="https://www.interdiscount.ch/fr/product/apple-iphone-18-pro-256-gb-noir-6-3-48-mp-5g-0014559705">Lien 2</a>
+        </aside>
     </main>
     <footer>
     </footer>
