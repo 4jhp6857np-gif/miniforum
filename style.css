@@ -1,3 +1,15 @@
+/* === 1. Reglages generaux ============================ */
+
+/* === 2. En-tete et navigation ======================== */
+
+/* === 3. Contenu principal ============================ */
+
+/* === 4. Cartes de sujet ============================== */
+
+/* === 5. Formulaires ================================== */
+
+/* === 6. Pied de page ================================= */
+
 button {
 background-color: #1D4E89;
 color: white;
@@ -6,3 +18,4 @@ border: none;
 border-radius: 4px;
 cursor: pointer;
 }
+
