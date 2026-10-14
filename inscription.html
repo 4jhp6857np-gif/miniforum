@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="entete">
         <h1>MiniForum</h1>
-        <img src="images/logo.png" alt="Logo du MiniForum" style="width: 210px; height: 140px">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a>
+                </li><a href="#sujets">Sujets</a>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><p><a href="inscription.html">Inscription</a></p></li>
-            <li><p><a href="connexion.html">Connexion</a></p></li>
-        </ul>
-    </nav>
     <main>
         <h2>Crée un compte</h2>
         <form action="/inscription" method="post">
@@ -53,11 +54,11 @@
                     <label for="news">J'accepte les conditions d'utilisations</label>
                 </p>
             </fieldset>
-            <button type="submit">Créer mon compte</button>
+            <button class="bouton" type="submit">Créer mon compte</button>
             <a href="/connexion.html">Déjà inscrit ? Se connecter</a>
         </form>
     </main>
-    <footer>
+    <footer class="pied">
     <!-- Pied de page-->
     </footer>
 </body>

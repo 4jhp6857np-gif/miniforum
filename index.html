@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniForum- Accueil</title>
+    <title>MiniForum - Accueil</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="entete">
         <h1>MiniForum</h1>
-        <img src="images/logo.png" alt="Logo du MiniForum" style="width: 210px; height: 140px">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a>
+                </li><a href="#sujets">Sujets</a>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><p><a href="inscription.html">Inscription</a></p></li>
-            <li><p><a href="connexion.html">Connexion</a></p></li>
-        </ul>
-    </nav>
     <main>
         <section id="formulaire">
             <h2>Nouveau sujet</h2>
@@ -56,29 +57,29 @@
                     </p>
                 </fieldset>
                 <br>
-                <button type="submit">Publier le sujet</button>
+                <button class="bouton" type="submit">Publier le sujet</button>
             </form>
         </section>
         <section id="sujets">
             <h2>Sujets récents</h2>
-            <article>
-                <h3><a href="./sujet.html">Sujet 1</a></h3>
+            <article class="carte-sujet">
+                <h3><a class="liste-sujets" href="./sujet.html">Sujet 1</a></h3>
                 <strong>Auteur : Daniel </strong><br>
                 Catégorie : 
                 <p>
                     Ceci est un paragraphe très important
                 </p>
             </article>
-            <article>
-                <h3><a href="./sujet.html">Sujet 2</a></h3>
+            <article class="carte-sujet">
+                <h3><a class="liste-sujets" href="./sujet.html">Sujet 2</a></h3>
                 <strong>Auteur : Julien </strong><br>
                 Catégorie : 
                 <p>
                     Ceci est un paragraphe très important
                 </p>
             </article>
-            <article>
-                <h3><a href="./sujet.html">Sujet 3</a></h3>
+            <article class="carte-sujet">
+                <h3><a class="liste-sujets" href="./sujet.html">Sujet 3</a></h3>
                 <strong>Auteur : Robert </strong><br>
                 Catégorie : 
                 <p>
@@ -106,7 +107,8 @@
             </tbody>
         </table>
     </main>
-    <footer>
+    <footer class="pied">
+        sdsa
     </footer>
 </body>
 </html>

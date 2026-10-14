@@ -1,31 +1,30 @@
+/*
+Texte : #1A1A1A
+Acent : #1D4E89
+Fond de page : #F2F2F2
+Fond de carte : #FFFFF
+Bordure : #DDDDD
+*/
+
+
 /* === 1. Reglages generaux ============================ */
 * {
     box-sizing:border-box;
 }
-body {
+body{
     font-family: Helvetica;
     font-size: 16 px;
     line-height: 1.6;
-    color:cornflowerblue;
+    color:rgb(20, 29, 163);
     background-color: #f2f2f2;
     margin: 0;
 }
-main {
+main{
     max-width: 900 px;
     margin: 0 auto;
     padding: 20 px;
 }
-/* === 2. En-tete et navigation ======================== */
-
-/* === 3. Contenu principal ============================ */
-
-/* === 4. Cartes de sujet ============================== */
-
-/* === 5. Formulaires ================================== */
-
-/* === 6. Pied de page ================================= */
-
-button {
+button{
     background-color: #1D4E89;
     color: white;
     padding: 10px 20px;
@@ -33,4 +32,48 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+.liste-sujets{
+    color: rgb(20, 220, 80);
+}
+.carte-sujet{
+    color: rgb(68, 140, 173);
+}
+.carte-message{
+    color: deeppink;
+}
+.bouton{
+    color: darkcyan;
+}
+/* === 2. En-tete et navigation ======================== */
+.entete{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav a{
+    color: white;
+    text-decoration: 0;
+}
+.pied{
+    background-color: #d6dce2;
+    text-align: center;
+    padding-block: 15px;
+}
+/* === 3. Contenu principal ============================ */
+
+/* === 4. Cartes de sujet ============================== */
+
+/* === 5. Formulaires ================================== */
+
+/* === 6. Pied de page ================================= */
 
