@@ -15,7 +15,7 @@ body{
     font-family: Helvetica;
     font-size: 16 px;
     line-height: 1.6;
-    color:rgb(20, 29, 163);
+    color:black;
     background-color: #f2f2f2;
     margin: 0;
 }
@@ -31,15 +31,6 @@ button{
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-.liste-sujets{
-    color: rgb(20, 220, 80);
-}
-.carte-sujet{
-    color: rgb(68, 140, 173);
-}
-.carte-message{
-    color: deeppink;
 }
 .bouton{
     color: darkcyan;
@@ -72,8 +63,64 @@ nav a{
 /* === 3. Contenu principal ============================ */
 
 /* === 4. Cartes de sujet ============================== */
-
+.liste-sujets{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.carte-sujet{
+    background-color: white;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: medium;
+}
+.carte-sujet h3 a{
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.liste-messages{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.carte-message{
+    background-color: white;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: medium;
+}
+.carte-message h4{
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
 /* === 5. Formulaires ================================== */
+input, textarea, select, button{
+    font-family:inherit;
+    width: 100%;
+    padding: 8px;
+    border: 3px solid #ddd;
+}
+input[type=checkbox] {
+   width: 120px;
+}
 
+label{
+    display: block;
+}
+fieldset{
+    margin-bottom: 10 px;
+}
 /* === 6. Pied de page ================================= */
 
