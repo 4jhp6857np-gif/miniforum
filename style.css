@@ -1,3 +1,18 @@
+:root {
+    /* Couleurs-- nommees par leur ROLE, pas par leur teinte */
+    --couleur-texte: #1A1A1A;
+    --couleur-accent: #296dd4;
+    --couleur-fond: #f4f7fb;
+    --couleur-carte: #FFFFFF;
+    --couleur-bordure: #92b4dd;
+    /* Espacements-- une echelle, pas des valeurs au hasard */
+    --espace-petit: 0.5rem;
+    --espace-moyen: 1rem;
+    --espace-grand: 2rem;
+    /* Divers */
+    --rayon: 0.5rem;
+ }
+
 /* === 1. Réglages généraux ============================ */
 * {
     box-sizing: border-box;
@@ -7,8 +22,8 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #1A1A1A;
-    background-color: #F2F2F2;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
     margin: 0;
 }
 
@@ -23,28 +38,28 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1D4E89;
-    color: #FFFFFF;
-    padding: 5px;
+    background-color: var(--couleur-accent);
+    color: var(--couleur-carte);
+    padding: var(--espace-petit);
 }
 
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: var(--espace-moyen);
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 nav a {
-    color: #FFFFFF;
+    color: var(--couleur-carte);
     text-decoration: none;
 }
 
 .pied {
-    background-color: #D6DCE2;
+    background-color: var(--couleur-carte);
     text-align: center;
-    padding-block: 15px;
+    padding-block: var(--espace-moyen);
 }
 
 /* === 3. Cartes de sujet et messages ================ */
@@ -52,7 +67,7 @@ nav a {
 .liste-messages {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--espace-moyen);
     padding: 0;
 }
 
@@ -63,23 +78,23 @@ nav a {
 
 .carte-sujet,
 .carte-message {
-    background-color: #FFFFFF;
-    border: 1px solid #DDDDDD;
-    border-radius: 8px;
-    padding: 16px;
+    background-color: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    padding: var(--espace-moyen);
 }
 
 .carte-sujet h3 a {
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-    color: #1A1A1A;
+    color: var(--couleur-texte);
 }
 
 .carte-message h4 {
     font-size: 22px;
     font-weight: bold;
-    color: #1A1A1A;
+    color: var(--couleur-texte);
 }
 
 /* === 4. Formulaires ================================ */
@@ -92,24 +107,24 @@ button {
 
 label {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: var(--espace-petit);
 }
 
 fieldset {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #DDDDDD;
-    border-radius: 8px;
-    background-color: #FFFFFF;
+    margin-bottom: var(--espace-moyen);
+    padding: var(--espace-moyen);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    background-color: var(--couleur-carte);
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
 textarea,
 select {
     width: 100%;
-    padding: 8px;
-    border: 2px solid #DDDDDD;
-    border-radius: 5px;
+    padding: var(--espace-petit);
+    border: 2px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
     margin-top: 0;
 }
 
@@ -132,11 +147,11 @@ input[type="checkbox"] + label {
 }
 
 .bouton {
-    background-color: #1D4E89;
-    color: #FFFFFF;
+    background-color: var(--couleur-accent);
+    color: var(--couleur-carte);
     border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
+    padding: var(--espace-moyen) var(--espace-moyen);
+    border-radius: var(--rayon);
     cursor: pointer;
 }
 
@@ -146,40 +161,46 @@ textarea {
 
 /* === 5. États interactifs ========================== */
 a:hover {
-    color: #1D4E89;
+    color: var(--couleur-accent);
     text-decoration: underline;
 }
 
+nav a:hover {
+    color: var(--couleur-carte);
+    text-decoration: underline;
+}
+
+
 .bouton:hover {
-    background-color: #1D4E89;
+    background-color: var(--couleur-accent);
 }
 
 input:hover,
 select:hover,
 textarea:hover {
-    border-color: #5B8DB8;
-    box-shadow: 0 0 0 2px #5B8DB8;
+    border-color: var(--couleur-accent);
+    box-shadow: 0 0 0 2px var(--couleur-accent);
 }
 
 a:focus-visible,
 .bouton:focus-visible {
-    border-color: #1D4E89;
-    outline: 3px solid #7A9BBD;
+    border-color: var(--couleur-accent);
+    outline: 3px solid var(--couleur-bordure);
     outline-offset: 3px;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: #1D4E89;
-    outline: 2px solid #7A9BBD;
+    border-color: var(--couleur-accent);
+    outline: 2px solid var(--couleur-bordure);
     outline-offset: 1px;
 }
 
 input:focus-visible,
 textarea:focus-visible,
-select:focus-visible {
-    border-color: #1D4E89;
-    outline: 3px solid #7A9BBD;
+select:focus-visible{
+    border-color: var(--couleur-accent);
+    outline: 3px solid var(--couleur-accent);
     outline-offset: 2px;
 }
