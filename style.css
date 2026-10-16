@@ -1,11 +1,3 @@
-/*
-Texte : #1A1A1A
-Accent : #1D4E89
-Fond de page : #F2F2F2
-Fond de carte : #FFFFFF
-Bordure : #DDDDDD
-*/
-
 /* === 1. Réglages généraux ============================ */
 * {
     box-sizing: border-box;
@@ -55,9 +47,7 @@ nav a {
     padding-block: 15px;
 }
 
-/* === 3. Contenu principal =========================== */
-
-/* === 4. Cartes de sujet et messages ================= */
+/* === 3. Cartes de sujet et messages ================ */
 .liste-sujets,
 .liste-messages {
     display: flex;
@@ -92,7 +82,7 @@ nav a {
     color: #1A1A1A;
 }
 
-/* === 5. Formulaires ================================ */
+/* === 4. Formulaires ================================ */
 input,
 textarea,
 select,
@@ -113,19 +103,14 @@ fieldset {
     background-color: #FFFFFF;
 }
 
+input:not([type="radio"]):not([type="checkbox"]),
 textarea,
 select {
     width: 100%;
     padding: 8px;
     border: 2px solid #DDDDDD;
     border-radius: 5px;
-}
-
-input:not([type="radio"]):not([type="checkbox"]) {
-    width: 100%;
-    padding: 8px;
-    border: 2px solid #DDDDDD;
-    border-radius: 5px;
+    margin-top: 0;
 }
 
 input[type="radio"],
@@ -159,7 +144,7 @@ textarea {
     resize: vertical;
 }
 
-/* === 6. États interactifs ========================== */
+/* === 5. États interactifs ========================== */
 a:hover {
     color: #1D4E89;
     text-decoration: underline;
@@ -197,10 +182,4 @@ select:focus-visible {
     border-color: #1D4E89;
     outline: 3px solid #7A9BBD;
     outline-offset: 2px;
-}
-
-input:not([type="radio"]):not([type="checkbox"]),
-textarea,
-select {
-    margin-top: 0;
 }
