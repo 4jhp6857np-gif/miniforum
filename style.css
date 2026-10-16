@@ -34,7 +34,7 @@ body {
 }
 
 main {
-    max-width: 900px;
+    max-width: 60rem;
     margin: 0 auto;
     padding: var(--espace-moyen);
 }
