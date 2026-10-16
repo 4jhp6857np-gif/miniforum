@@ -11,57 +11,85 @@
         <h1>MiniForum</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a>
-                </li><a href="#sujets">Sujets</a>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#sujets">Sujets</a></li>
                 <li><a href="inscription.html">Inscription</a></li>
                 <li><a href="connexion.html">Connexion</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <a href="./index.html">Revenir à la première page</a>
-        <h2>MiniForum</h2>
-        <p>Auteur<br>Date<br>Catégorie</p>
+        <p><a href="index.html">Revenir à la page d’accueil</a></p>
+
+        <h2>Comment installer Node ?</h2>
+        <p>
+            Par <strong>Alice</strong> —
+            <time datetime="2026-10-14">14 octobre 2026</time> —
+            Catégorie : Général
+        </p>
+
         <section class="liste-messages">
             <h3>Réponses</h3>
-            <article class="carte-sujet">
-                <h3><a href="./sujet.html">Comment installer Node ?</a></h3>
-                <span>par alice - 12 messages</span>
-                <span>Général</span>
+
+            <article class="carte-message">
+                <p>
+                    <strong>Bob</strong> —
+                    <time datetime="2026-10-14">14 octobre 2026</time>
+                </p>
+                <p>Tu peux télécharger Node.js depuis son site officiel.</p>
             </article>
-            <article class="carte-sujet">
-                <h3><a href="./sujet.html">Erreur 404 sur mes images</a></h3>
-                <span>par bob - 3 messages</span>
-                <span>Aide</span>
+
+            <article class="carte-message">
+                <p>
+                    <strong>Chloé</strong> —
+                    <time datetime="2026-10-15">15 octobre 2026</time>
+                </p>
+                <p>Après l’installation, vérifie qu’il fonctionne avec la commande <code>node -v</code>.</p>
             </article>
-            <article class="carte-sujet">
-                <h3><a href="./sujet.html">Idées pour le projet de fin</a></h3>
-                <span>par chloe - 8 messages</span>
-                <span>Projets</span>
+
+            <article class="carte-message">
+                <p>
+                    <strong>Alice</strong> —
+                    <time datetime="2026-10-15">15 octobre 2026</time>
+                </p>
+                <p>Merci, j’ai réussi à l’installer et la commande fonctionne.</p>
             </article>
         </section>
+
+        <h3>Répondre à ce sujet</h3>
         <form action="/sujet" method="post">
-            <h3>Répondre à ce sujet</h3>
             <fieldset>
                 <legend>Votre réponse</legend>
+
                 <p>
-                    <strong><label for="pseudo">Pseudo</label></strong><br>
-                    <input type="text" id="pseudo" name="pseudo" placeholder="ex : Danny" required>
+                    <label for="pseudo"><strong>Pseudo</strong></label>
+                    <input
+                        type="text"
+                        id="pseudo"
+                        name="pseudo"
+                        placeholder="ex : Danny"
+                        required
+                    >
                 </p>
+
                 <p>
-                    <strong><label for="message">Message</label></strong><br>
-                    <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
+                    <label for="message"><strong>Message</strong></label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        maxlength="500"
+                        required
+                    ></textarea>
                 </p>
+
                 <button class="bouton" type="submit">Publier le sujet</button>
             </fieldset>
         </form>
-        <h3>Sujets similaires</h3>
     </main>
+
     <footer class="pied">
     </footer>
-    <aside>
-            <p><a href="https://www.apple.com/chfr/ipad-air/">Lien 1</a></p>
-            <p><a href="https://www.interdiscount.ch/fr/product/apple-iphone-18-pro-256-gb-noir-6-3-48-mp-5g-0014559705">Lien 2</a></p>
-    </aside>
 </body>
 </html>

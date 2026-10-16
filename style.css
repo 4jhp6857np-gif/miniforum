@@ -1,187 +1,206 @@
 /*
 Texte : #1A1A1A
-Acent : #1D4E89
+Accent : #1D4E89
 Fond de page : #F2F2F2
-Fond de carte : #FFFFF
-Bordure : #DDDDD
+Fond de carte : #FFFFFF
+Bordure : #DDDDDD
 */
 
-
-/* === 1. Reglages generaux ============================ */
+/* === 1. Réglages généraux ============================ */
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
-body{
-    font-family: Helvetica;
-    font-size: 16 px;
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
-    color:black;
-    background-color: #f2f2f2;
+    color: #1A1A1A;
+    background-color: #F2F2F2;
     margin: 0;
 }
-main{
-    max-width: 900 px;
+
+main {
+    max-width: 900px;
     margin: 0 auto;
-    padding: 20 px;
+    padding: 20px;
 }
-/* === 2. En-tete et navigation ======================== */
-.entete{
+
+/* === 2. En-tête et navigation ======================= */
+.entete {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    color: white;
+    background-color: #1D4E89;
+    color: #FFFFFF;
     padding: 5px;
 }
-nav ul{
+
+nav ul {
     display: flex;
     gap: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-nav a{
-    color: white;
-    text-decoration: 0;
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
-.pied{
-    background-color: #d6dce2;
+
+.pied {
+    background-color: #D6DCE2;
     text-align: center;
     padding-block: 15px;
 }
-/* === 3. Contenu principal ============================ */
 
-/* === 4. Cartes de sujet ============================== */
-.liste-sujets{
+/* === 3. Contenu principal =========================== */
+
+/* === 4. Cartes de sujet et messages ================= */
+.liste-sujets,
+.liste-messages {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 0;
 }
-.carte-sujet{
-    background-color: white;
-    border: 3px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    font-size: medium;
-}
-.carte-sujet h3 a{
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
-.liste-messages{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+
+.liste-messages {
     list-style: none;
     margin: 0;
-    padding: 0;
 }
-.carte-message{
-    background-color: white;
-    border: 3px solid #ddd;
+
+.carte-sujet,
+.carte-message {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
     border-radius: 8px;
     padding: 16px;
-    font-size: medium;
 }
-.carte-message h4{
+
+.carte-sujet h3 a {
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-    color: black;
-}
-/* === 5. Formulaires ================================== */
-input, textarea, select, button{
-    font-family:inherit;
+    color: #1A1A1A;
 }
 
-label{
+.carte-message h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1A1A1A;
+}
+
+/* === 5. Formulaires ================================ */
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+}
+
+label {
     display: block;
     margin-bottom: 4px;
 }
 
-fieldset{
+fieldset {
     margin-bottom: 20px;
     padding: 15px;
-    border: 3px solid #d1d1df;
+    border: 1px solid #DDDDDD;
     border-radius: 8px;
-    background-color:rgb(230, 230, 240);
+    background-color: #FFFFFF;
 }
 
-textarea, select{
+textarea,
+select {
     width: 100%;
     padding: 8px;
-    border: 2px solid #ddd;
+    border: 2px solid #DDDDDD;
     border-radius: 5px;
 }
 
-input:not([type="radio"]):not([type="checkbox"]){
+input:not([type="radio"]):not([type="checkbox"]) {
     width: 100%;
     padding: 8px;
-    border: 2px solid #ddd;
+    border: 2px solid #DDDDDD;
     border-radius: 5px;
 }
 
-input:not([type="radio"]):not([type="checkbox"]):hover{
-    border-color: #7a9bbd;
-}
-
-input[type="radio"], [type="checkbox"]{
+input[type="radio"],
+input[type="checkbox"] {
     width: auto;
     padding: 0;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     display: inline;
     vertical-align: middle;
     margin-right: 8px;
 }
 
-input[type="radio"] + label, input[type="checkbox"] + label{
+input[type="radio"] + label,
+input[type="checkbox"] + label {
     display: inline;
     margin-bottom: 0;
 }
 
-.bouton{
-    background-color: #1769aa;
-    color: white;
+.bouton {
+    background-color: #1D4E89;
+    color: #FFFFFF;
     border: none;
     padding: 12px 20px;
     border-radius: 6px;
     cursor: pointer;
 }
 
-textarea{
-    resize:vertical;
-
+textarea {
+    resize: vertical;
 }
-/* === 6. Pied de page ================================= */
-a:hover{
-    color: #12558b;
+
+/* === 6. États interactifs ========================== */
+a:hover {
+    color: #1D4E89;
     text-decoration: underline;
 }
 
-.bouton:hover{
-    background-color: #12558b;
+.bouton:hover {
+    background-color: #1D4E89;
 }
 
-input:hover, select:hover, textarea:hover{
-    border-color: #7a9bbd;
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #5B8DB8;
+    box-shadow: 0 0 0 2px #5B8DB8;
 }
-a:focus-visible, .bouton:focus-visible{
-    outline: 3px solid #f0a500;
+
+a:focus-visible,
+.bouton:focus-visible {
+    border-color: #1D4E89;
+    outline: 3px solid #7A9BBD;
     outline-offset: 3px;
 }
 
-input:focus, textarea:focus, select:focus{
-    border-color: #1769aa;
-    outline: 2px solid #f0a500;
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #1D4E89;
+    outline: 2px solid #7A9BBD;
     outline-offset: 1px;
 }
 
-input:focus-visible, textarea:focus-visible, select:focus-visible{
-    outline: 3px solid #f0a500;
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    border-color: #1D4E89;
+    outline: 3px solid #7A9BBD;
     outline-offset: 2px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea,
+select {
+    margin-top: 0;
 }

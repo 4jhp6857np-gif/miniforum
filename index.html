@@ -11,74 +11,86 @@
         <h1>MiniForum</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a>
-                </li><a href="#sujets">Sujets</a>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#sujets">Sujets</a></li>
                 <li><a href="inscription.html">Inscription</a></li>
                 <li><a href="connexion.html">Connexion</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="sujets" class="liste-sujets">
             <h2>Sujets récents</h2>
+
             <article class="carte-sujet">
                 <h3><a href="./sujet.html">Comment installer Node ?</a></h3>
                 <span>par alice - 12 messages</span>
                 <span>Général</span>
             </article>
+
             <article class="carte-sujet">
                 <h3><a href="./sujet.html">Erreur 404 sur mes images</a></h3>
                 <span>par bob - 3 messages</span>
                 <span>Aide</span>
             </article>
+
             <article class="carte-sujet">
                 <h3><a href="./sujet.html">Idées pour le projet de fin</a></h3>
                 <span>par chloe - 8 messages</span>
                 <span>Projets</span>
             </article>
         </section>
+
         <section id="formulaire">
             <h2>Nouveau sujet</h2>
+
             <form action="/topics" method="post">
                 <fieldset>
                     <legend>Votre message</legend>
+
                     <p>
-                        <strong><label for="pseudo">Pseudo</label></strong><br>
+                        <strong><label for="pseudo">Pseudo</label></strong>
                         <input type="text" id="pseudo" name="pseudo" placeholder="ex : Danny" required>
                     </p>
+
                     <p>
-                        <strong><label for="titre">Titre du sujet</label></strong><br>
+                        <strong><label for="titre">Titre du sujet</label></strong>
                         <input type="text" id="titre" name="titre" maxlength="80" required>
                     </p>
+
                     <p>
-                        <strong><label for="message">Message</label></strong><br>
+                        <strong><label for="message">Message</label></strong>
                         <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
                     </p>
-                    
                 </fieldset>
+
                 <fieldset>
                     <legend>Options de publication</legend>
+
                     <p>
-                        <strong><label for="categorie">Catégorie</label></strong><br>
+                        <strong><label for="categorie">Catégorie</label></strong>
                         <select id="categorie" name="categorie">
                             <option value="general">Général</option>
                             <option value="aide">Aide</option>
                             <option value="projets">Projets</option>
                         </select>
                     </p>
+
                     <p>
-                        <strong><label>Visibilité</label></strong>
+                        <strong>Visibilité</strong><br>
                         <input type="radio" id="public" name="visibilite" value="public" checked>
                         <label for="public">Public</label>
                         <input type="radio" id="prive" name="visibilite" value="prive">
                         <label for="prive">Réservé aux membres</label>
                     </p>
                 </fieldset>
-                <br>
+
                 <button class="bouton" type="submit">Publier le sujet</button>
             </form>
         </section>
     </main>
+
     <footer class="pied">
         sdsa
     </footer>
