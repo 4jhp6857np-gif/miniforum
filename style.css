@@ -8,7 +8,7 @@
     /* Espacements-- une echelle, pas des valeurs au hasard */
     --espace-petit: 0.5rem;
     --espace-moyen: 1rem;
-    --espace-intermediaire: 1.5rem
+    --espace-intermediaire: 1.5rem;
     --espace-grand: 2rem;
     /* Divers */
     --rayon: 0.5rem;
@@ -42,6 +42,7 @@ main {
 /* === 2. En-tête et navigation ======================= */
 .entete {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: var(--couleur-accent);
@@ -51,6 +52,7 @@ main {
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--espace-moyen);
     list-style: none;
     margin: 0;
@@ -68,21 +70,59 @@ nav a {
     padding-block: var(--espace-moyen);
 }
 
-/* === 3. Cartes de sujet et messages ================ */
-.liste-sujets,
-.liste-messages {
+@media (min-width: 48rem){
+    .entete {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--espace-intermediaire);
+    }
+}
+
+.actions-compte {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: var(--espace-petit);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 48rem) {
+    .actions-compte {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* === 3. Cartes de sujet et messages ================ */
+.liste-sujets {
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--espace-moyen);
     padding: 0;
 }
 
-.liste-messages {
+.fil-messages {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espace-moyen);
+    padding: var(--espace-moyen);
     list-style: none;
+    flex: 1 1 24rem;
     margin: 0;
 }
 
-.carte-sujet,
+#sujets h2{
+    flex: 1 1 100%;
+}
+
+.carte-sujet {
+    background-color: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    padding: var(--espace-moyen);
+    flex: 1 1 18rem;
+}
+
 .carte-message {
     background-color: var(--couleur-carte);
     border: 1px solid var(--couleur-bordure);
@@ -103,11 +143,23 @@ nav a {
     color: var(--couleur-texte);
 }
 
+.zone-sujet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espace-moyen);
+}
+
+.infos-sujet {
+    background-color: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    padding: var(--espace-moyen);
+    flex: 0 0 16rem;
+}
 /* === 4. Formulaires ================================ */
 input,
 textarea,
-select,
-button {
+select {
     font-family: inherit;
 }
 
@@ -159,11 +211,15 @@ input[type="checkbox"] + label {
     padding: var(--espace-moyen) var(--espace-moyen);
     border-radius: var(--rayon);
     cursor: pointer;
+    font-size: inherit;
+    font-family: inherit
 }
 
 textarea {
     resize: vertical;
 }
+
+
 
 /* === 5. États interactifs ========================== */
 a:hover {

@@ -22,45 +22,47 @@
     <main>
         <p><a href="index.html">Revenir à la page d’accueil</a></p>
 
-        <h2>Comment installer Node ?</h2>
+        <h2>Bienvenu sur le Miniforum !</h2>
         <p>
-            Par <strong>Alice</strong> —
-            <time datetime="2026-10-14">14 octobre 2026</time> —
-            Catégorie : Général
+            Ouvert par <strong>Alice</strong> le <time datetime="2026-09-15">15 septembre 2026</time>
         </p>
-
-        <section class="liste-messages">
-            <h3>Réponses</h3>
-
-            <article class="carte-message">
-                <h4>
-                    <span>Bob</span> —
-                    <time datetime="2026-10-14">14 octobre 2026</time>
-                </h4>          
-                <p>Tu peux télécharger Node.js depuis son site officiel.</p>
-            </article>
-
-            <article class="carte-message">
-                <h4>
-                    <span>Chloé</span> —
-                    <time datetime="2026-10-15">15 octobre 2026</time>
-                </h4>
-                <p>
-                    Après l’installation, vérifie qu’il fonctionne avec la commande <code>node -v</code>
-                </p>
-            </article>
-
-            <article class="carte-message">
-                <h4>
-                    <span>Alice</span> —
-                    <time datetime="2026-10-15">15 octobre 2026</time>
-                </h4>
-                <p>
-                    Merci, j’ai réussi à l’installer et la commande fonctionne.
-                </p>
-            </article>
-        </section>
-
+        <div class="zone-sujet">
+            <section class="fil-messages">
+                <h3>Réponses</h3>
+                <article class="carte-message">
+                    <h4>
+                        <span>Bob</span> —
+                        <time datetime="2026-10-14">14 octobre 2026</time>
+                    </h4>          
+                    <p>Tu peux télécharger Node.js depuis son site officiel.</p>
+                </article>
+                <article class="carte-message">
+                    <h4>
+                        <span>Chloé</span> —
+                        <time datetime="2026-10-15">15 octobre 2026</time>
+                    </h4>
+                    <p>
+                        Après l’installation, vérifie qu’il fonctionne avec la commande <code>node -v</code>
+                    </p>
+                </article>
+                <article class="carte-message">
+                    <h4>
+                        <span>Alice</span> —
+                        <time datetime="2026-10-15">15 octobre 2026</time>
+                    </h4>
+                    <p>
+                        Merci, j’ai réussi à l’installer et la commande fonctionne.
+                    </p>
+                </article>
+            </section>
+            <aside class="infos-sujets">
+                <h3>À propos de ce sujet</h3>
+                <span>Daniel Kunz, le 19 octobre 2026 </span><br>
+                <span>Catégorie : Sport </span><br>
+                <span>Nombre de réponses : 3</span>
+                <!-- auteur, date de création, catégorie, nombre de réponses-->
+            </aside>
+        </div>
         <h3>Répondre à ce sujet</h3>
         <form action="/sujet" method="post">
             <fieldset>
@@ -87,8 +89,9 @@
                         required
                     ></textarea>
                 </p>
-
-                <button class="bouton" type="submit">Publier le sujet</button>
+                <div class="actions-compte">
+                    <button class="bouton" type="submit">Publier le sujet</button>
+                </div>
             </fieldset>
         </form>
     </main>
