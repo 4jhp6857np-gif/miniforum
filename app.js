@@ -50,6 +50,8 @@ function validerTitre(titres, saisie) {
     return "";
 }
 
+// -- tests de l'étape 4 --
+
 console.log("--- etape 4 ---");
 console.table(titresTries(titres));
 console.log(titres[0]);
@@ -58,6 +60,9 @@ console.log(chercheDansTitres(titres, "licorne"));
 console.log(titreExiste(titres, " GIT REFUSE MON PUSH "));
 console.log(titreExiste(titres, "Un titre inventé"));
 console.log();
+
+// -- tests de l'étape 5 --
+
 console.log("--- etape 5---");
 console.log(validerTitre(titres, ""));
 console.log(validerTitre(titres, "    "));
