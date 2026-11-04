@@ -10,7 +10,7 @@ const LONGUEUR_MAX = 80;
 const titres = [
     "Comment installer Node ?",
     "Les champs SQL",
-    "Les fonctionnalités de JavaScript",
+    "Un De TEs TItreS  ",
     "Voici tous les paramètres de CSS",
     "Les prénoms, noms et emails des utilisateurs",
     "Quelles sont les différentes balises de HTML ?"
@@ -33,6 +33,23 @@ function titreExiste(titres, saisie) {
     return titreIdentique;
 }
 
+function validerTitre(titres, saisie) {
+    const titre = saisie.trim();
+    if (titre.length == 0) {
+        return "Le titre est obligatoire";
+    }
+    if (titre.length < LONGUEUR_MIN) {
+        return "Le titre doit faire au moins " + LONGUEUR_MIN + " caractères.";
+    }
+    if (titre.length > LONGUEUR_MAX) {
+        return "Le titre ne doit pas dépasser " + LONGUEUR_MAX + " caractères.";
+    }
+    if (titreExiste(titres, titre)) {
+        return "Ce sujet existe déjà";
+    }
+    return "";
+}
+
 console.log("--- etape 4 ---");
 console.table(titresTries(titres));
 console.log(titres[0]);
@@ -40,3 +57,12 @@ console.log(chercheDansTitres(titres, "sql"));
 console.log(chercheDansTitres(titres, "licorne"));
 console.log(titreExiste(titres, " GIT REFUSE MON PUSH "));
 console.log(titreExiste(titres, "Un titre inventé"));
+console.log();
+console.log("--- etape 5---");
+console.log(validerTitre(titres, ""));
+console.log(validerTitre(titres, "    "));
+console.log(validerTitre(titres, "Git"));
+console.log(validerTitre(titres, "a".repeat(81)));
+console.log(validerTitre(titres, "UN DE TES TITRES"));
+const reponse = validerTitre(titres, "Comment lire une erreur ?");
+console.log("[" + reponse + "]");
