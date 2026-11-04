@@ -17,3 +17,26 @@ const titres = [
 ]
 
 console.table(titres)
+
+function titresTries(titres) {
+    const tableau = [... titres ].sort((a, b) => a.localeCompare(b));
+    return tableau;
+}
+
+function chercheDansTitres(titres,texte) {
+    const titresContenantTexte = titres.filter(titre => titre.toLowerCase().includes(texte.toLowerCase()));
+    return titresContenantTexte;
+}
+
+function titreExiste(titres, saisie) {
+    const titreIdentique = titres.some(titre => titre.trim().toLowerCase() === saisie.trim().toLowerCase())
+    return titreIdentique;
+}
+
+console.log("--- etape 4 ---");
+console.table(titresTries(titres));
+console.log(titres[0]);
+console.log(chercheDansTitres(titres, "sql"));
+console.log(chercheDansTitres(titres, "licorne"));
+console.log(titreExiste(titres, " GIT REFUSE MON PUSH "));
+console.log(titreExiste(titres, "Un titre inventé"));
