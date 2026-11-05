@@ -12,7 +12,15 @@
     --espace-grand: 2rem;
     /* Divers */
     --rayon: 0.5rem;
- }
+    --couleur-erreur: #A32020;
+}
+
+.message-erreur {
+    margin: 0.25rem 0 0;
+    min-height: 1.2em;
+    color: var(--couleur-erreur);
+    font-size: 0.875rem;
+}
 
 /* === 1. Réglages généraux ============================ */
 * {

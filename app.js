@@ -5,6 +5,7 @@ btn.addEventListener('click', () => {
 });*/
 
 console.log("app.js chargé");
+console.log(document.querySelector("#sujets"))
 const LONGUEUR_MIN = 5;
 const LONGUEUR_MAX = 80;
 const titres = [
@@ -49,7 +50,7 @@ function validerTitre(titres, saisie) {
     }
     return "";
 }
-
+/*
 // -- tests de l'étape 4 --
 
 console.log("--- etape 4 ---");
@@ -71,3 +72,29 @@ console.log(validerTitre(titres, "a".repeat(81)));
 console.log(validerTitre(titres, "UN DE TES TITRES"));
 const reponse = validerTitre(titres, "Comment lire une erreur ?");
 console.log("[" + reponse + "]");
+*/
+
+// Semaine 7
+ 
+function carteSujet(titre) {
+    const carte = document.createElement("article");
+    carte.classList.add("carte-sujet");
+    const h3 = document.createElement("h3");
+    h3.textContent = titre;
+    carte.append(h3);
+    return carte;
+}
+
+function afficherSujets(liste) {
+    const section = document.querySelector("#sujets");
+    document.querySelectorAll(".carte-sujet").forEach((carte) => carte.
+    remove());
+    for (const titre of liste) {
+        section.append(carteSujet(titre));
+    }
+    return section;
+}
+
+if (document.querySelector("#sujets") !== null) {
+    afficherSujets(titres);
+}
