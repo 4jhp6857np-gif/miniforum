@@ -23,7 +23,7 @@
     <main>
         <section id="sujets" class="liste-sujets">
             <h2>Sujets récents</h2>
-
+            <!--
             <article class="carte-sujet">
                 <h3><a href="./sujet.html">Comment installer Node ?</a></h3>
                 <span>par alice - 12 messages</span>
@@ -41,12 +41,13 @@
                 <span>par chloe - 8 messages</span>
                 <span>Projets</span>
             </article>
+            -->
         </section>
 
         <section id="formulaire">
             <h2>Nouveau sujet</h2>
 
-            <form action="/topics" method="post">
+            <form id="form-nouveau-sujet" action="/topics" method="post" novalidate>
                 <fieldset>
                     <legend>Votre message</legend>
 
