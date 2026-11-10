@@ -50,24 +50,23 @@
             <form id="form-nouveau-sujet" action="/topics" method="post" novalidate>
                 <fieldset>
                     <legend>Votre message</legend>
-
                     <p>
                         <strong><label for="pseudo">Pseudo</label></strong>
                         <input type="text" id="pseudo" name="pseudo" placeholder="ex : Danny" required>
-                        <p class="message-erreur" id="erreur-pseudo"></p>
                     </p>
+                    <p class="message-erreur" id="erreur-pseudo"></p>
 
                     <p>
                         <strong><label for="titre">Titre du sujet</label></strong>
                         <input type="text" id="titre" name="titre" maxlength="80" required>
-                        <p class="message-erreur" id="erreur-titre"></p>
                     </p>
+                    <p class="message-erreur" id="erreur-titre"></p>
 
                     <p>
                         <strong><label for="message">Message</label></strong>
                         <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
-                        <p class="message-erreur" id="erreur-message"></p>
                     </p>
+                    <p class="message-erreur" id="erreur-message"></p>
                 </fieldset>
 
                 <fieldset>

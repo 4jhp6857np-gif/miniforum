@@ -50,6 +50,7 @@ function validerTitre(titres, saisie) {
     }
     return "";
 }
+
 /*
 // -- tests de l'étape 4 --
 
@@ -76,25 +77,66 @@ console.log("[" + reponse + "]");
 
 // Semaine 7
  
+// Tes constantes et ton tableau titres
+// Tes fonctions de la semaine 6 :
+// titresTries
+// chercheDansTitres
+// titreExiste
+// validerTitre
+
+// Semaine 7
+
 function carteSujet(titre) {
     const carte = document.createElement("article");
     carte.classList.add("carte-sujet");
+
     const h3 = document.createElement("h3");
-    h3.textContent = titre;
+    const lien = document.createElement("a");
+
+    lien.href = "./sujet.html";
+    lien.textContent = titre;
+
+    h3.append(lien);
     carte.append(h3);
+
     return carte;
 }
 
 function afficherSujets(liste) {
     const section = document.querySelector("#sujets");
-    document.querySelectorAll(".carte-sujet").forEach((carte) => carte.
-    remove());
+
+    section.querySelectorAll(".carte-sujet").forEach((carte) => {
+        carte.remove();
+    });
+
     for (const titre of liste) {
         section.append(carteSujet(titre));
     }
-    return section;
 }
 
+// Démarrage : seulement sur la page qui contient la liste
 if (document.querySelector("#sujets") !== null) {
     afficherSujets(titres);
 }
+
+const formulaire = document.querySelector("#form-nouveau-sujet");
+formulaire.addEventListener("submit", (event) => {
+    event.preventDefault();
+})
+
+const champTitre = document.querySelector("#titre");
+function afficherErreur(idMessage, texte) {
+    document.querySelector(idMessage).textContent = texte;
+}
+const erreurTitre = validerTitres(titres, champTitre.value);
+afficherErreur("#erreur-titre", erreurTitre)
+if (erreurTitre == "") {
+    titres.push(champTitre.value.trim());
+    afficherSujets(titres);
+}
+if (erreurTitre !== "") {
+    return;
+}
+
+formulaire.requestFullscreen();
+champTitre.focus();
