@@ -115,7 +115,6 @@ function afficherSujets(liste) {
     }
 }
 
-// Démarrage : seulement sur la page qui contient la liste
 if (document.querySelector("#sujets") !== null) {
     afficherSujets(titres);
 }
@@ -152,9 +151,7 @@ if (formulaire !== null) {
 
     formulaire.addEventListener("submit", (event) => {
 
-        // 1. Empêcher le rechargement de la page
         event.preventDefault();
-        // 2. Récupérer le titre saisi
         const saisiePseudo = champPseudo.value;
         const saisieTitre = champTitre.value;
         const saisieMessage = champMessage.value;
@@ -167,11 +164,8 @@ if (formulaire !== null) {
         if (erreurPseudo !== "" || erreurTitre !== "" || erreurMessage !== "") {
             return;
         }
-        // 4. Effacer l'erreur et ajouter le titre
         titres.push(saisieTitre.trim());
-        // Redessiner les cartes
         afficherSujets(titres);
-        // 5. Vider le formulaire et replacer le curseur
         formulaire.reset();
         champPseudo.focus();
     });
