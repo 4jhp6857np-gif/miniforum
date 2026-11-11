@@ -37,7 +37,7 @@ function titreExiste(titres, saisie) {
 
 function validerTitre(titres, saisie) {
     const titre = saisie.trim();
-    if (titre.length == 0) {
+    if (titre.length === 0) {
         return "Le titre est obligatoire";
     }
     if (titre.length < LONGUEUR_MIN) {
