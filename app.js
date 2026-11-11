@@ -119,24 +119,45 @@ if (document.querySelector("#sujets") !== null) {
     afficherSujets(titres);
 }
 
+
 const formulaire = document.querySelector("#form-nouveau-sujet");
-formulaire.addEventListener("submit", (event) => {
-    event.preventDefault();
-})
 
-const champTitre = document.querySelector("#titre");
-function afficherErreur(idMessage, texte) {
-    document.querySelector(idMessage).textContent = texte;
-}
-const erreurTitre = validerTitres(titres, champTitre.value);
-afficherErreur("#erreur-titre", erreurTitre)
-if (erreurTitre == "") {
-    titres.push(champTitre.value.trim());
-    afficherSujets(titres);
-}
-if (erreurTitre !== "") {
-    return;
-}
+if (formulaire !== null) {
 
-formulaire.requestFullscreen();
-champTitre.focus();
+    const champTitre = document.querySelector("#titre");
+    const champPseudo = document.querySelector("#pseudo");
+
+    function afficherErreur(idMessage, texte) {
+        document.querySelector(idMessage).textContent = texte;
+    }
+
+    formulaire.addEventListener("submit", (event) => {
+
+        // 1. Empêcher le rechargement de la page
+        event.preventDefault();
+
+        // 2. Récupérer le titre saisi
+        const saisieTitre = champTitre.value;
+
+        // 3. Vérifier le titre
+        const erreurTitre = validerTitre(titres, saisieTitre);
+
+        if (erreurTitre !== "") {
+            afficherErreur("#erreur-titre", erreurTitre);
+            return;
+        }
+
+        // 4. Effacer l'erreur et ajouter le titre
+        afficherErreur("#erreur-titre", "");
+
+        titres.push(saisieTitre.trim());
+
+        // Redessiner les cartes
+        afficherSujets(titres);
+
+        // 5. Vider le formulaire et replacer le curseur
+        formulaire.reset();
+        champPseudo.focus();
+
+    });
+}
