@@ -8,6 +8,7 @@ console.log("app.js chargé");
 console.log(document.querySelector("#sujets"))
 const LONGUEUR_MIN = 5;
 const LONGUEUR_MAX = 80;
+const MESSAGE_MAX = 500;
 const titres = [
     "Comment installer Node ?",
     "Les champs SQL",
@@ -119,14 +120,32 @@ if (document.querySelector("#sujets") !== null) {
     afficherSujets(titres);
 }
 
+function validerPseudo(saisie) {
+    if (saisie.trim() === "") {
+        return "Le pseudo est obligatoire.";
+    }
+    return "";
+}
 
+function validerMessage(saisie) {
+    const message = saisie.trim();
+    if (message === "") {
+        return "Le message est obligatoire.";
+    }
+    if (message.length > MESSAGE_MAX) {
+        return "Le message ne doit pas dépasser " + MESSAGE_MAX + " caractères.";
+    }
+    return "";
+}
+
+// Démarrage
 const formulaire = document.querySelector("#form-nouveau-sujet");
 
 if (formulaire !== null) {
 
     const champTitre = document.querySelector("#titre");
     const champPseudo = document.querySelector("#pseudo");
-
+    const champMessage = document.querySelector("#message");
     function afficherErreur(idMessage, texte) {
         document.querySelector(idMessage).textContent = texte;
     }
@@ -135,29 +154,25 @@ if (formulaire !== null) {
 
         // 1. Empêcher le rechargement de la page
         event.preventDefault();
-
         // 2. Récupérer le titre saisi
+        const saisiePseudo = champPseudo.value;
         const saisieTitre = champTitre.value;
-
-        // 3. Vérifier le titre
+        const saisieMessage = champMessage.value;
+        const erreurPseudo = validerPseudo(saisiePseudo);
         const erreurTitre = validerTitre(titres, saisieTitre);
-
-        if (erreurTitre !== "") {
-            afficherErreur("#erreur-titre", erreurTitre);
+        const erreurMessage = validerMessage(saisieMessage);
+        afficherErreur("#erreur-pseudo", erreurPseudo);
+        afficherErreur("#erreur-titre", erreurTitre);
+        afficherErreur("#erreur-message", erreurMessage);
+        if (erreurPseudo !== "" || erreurTitre !== "" || erreurMessage !== "") {
             return;
         }
-
         // 4. Effacer l'erreur et ajouter le titre
-        afficherErreur("#erreur-titre", "");
-
         titres.push(saisieTitre.trim());
-
         // Redessiner les cartes
         afficherSujets(titres);
-
         // 5. Vider le formulaire et replacer le curseur
         formulaire.reset();
         champPseudo.focus();
-
     });
 }
