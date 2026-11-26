@@ -1,13 +1,11 @@
 -- ============================================================
 --  MiniForum -- base de référence : schéma + données
 --  10 utilisateurs, 20 sujets, 80 messages, 35 « j'aime »
---  Prochains numéros : idUser 11, idTopic 21, idPost 81.
 --
---  Dans phpMyAdmin : clique sur ta base miniforum_prenom (à
---  gauche), onglet Importer, ce fichier, Importer.
---  ATTENTION : les quatre tables sont SUPPRIMÉES puis recréées.
---  Tout ce qui y avait été ajouté disparaît, et les compteurs
---  AUTO_INCREMENT repartent de 11, 21 et 81 pour tout le monde.
+--  Usage enseignante : remettre une base dans l'état officiel.
+--  Dans phpMyAdmin : sélectionner la base (vide ou non), onglet
+--  Importer, ce fichier, Importer. Les quatre tables sont
+--  supprimées puis recréées : toute donnée ajoutée est perdue.
 --
 --  Schéma identique à celui que les élèves construisent au TP
 --  (mêmes types, mêmes contraintes, mêmes ON DELETE).
